@@ -71,7 +71,15 @@
             })
         };
 
-        DocsBotAI.init({ id: "cTW2YtLwX3hKtkVwhgJJ/QPMD7vaceBMPeBHfKr02" });
+        DocsBotAI.init({ id: "cTW2YtLwX3hKtkVwhgJJ/QPMD7vaceBMPeBHfKr02" }).then(() => {
+            // Delay to ensure the chatbot icon is present in the DOM
+            setTimeout(() => {
+                const chatbotIcon = document.querySelector(".docsbotai-icon"); // Adjust selector if necessary
+                if (chatbotIcon) {
+                    chatbotIcon.click(); // Simulate a click on the icon
+                }
+            }, 1000); // Adjust the delay as needed to ensure the icon is loaded
+        });
     </script>
 
     <script>
