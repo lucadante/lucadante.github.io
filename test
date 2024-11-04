@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocsBot AI Chatbot</title>
+</head>
+<body>
+    <h1>Welcome to the DocsBot AI Chatbot</h1>
+    <p>This page contains the embedded DocsBot AI chatbot.</p>
+
+    <!-- DocsBot AI iframe embed -->
+    <iframe src="https://docsbot.ai/iframe/cTW2YtLwX3hKtkVwhgJJ/QPMD7vaceBMPeBHfKr02" 
+            width="600" 
+            height="650" 
+            frameborder="0" 
+            allowtransparency="true" 
+            scrolling="no">
+    </iframe>
+</body>
+</html>
