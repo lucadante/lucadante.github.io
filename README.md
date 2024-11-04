@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocsBot AI Chatbot</title>
+    <style>
+        /* Style to center the chatbot container */
+        #docsbotai-root {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;  /* Adjust width as needed */
+            height: 80%; /* Adjust height as needed */
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Full-screen overlay background */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the DocsBot AI Chatbot</h1>
-    <p>This page contains the embedded DocsBot AI chatbot.</p>
+    <!-- Full-screen overlay background -->
+    <div id="overlay"></div>
 
     <!-- Container for the DocsBot AI chatbot -->
     <div id="docsbotai-root"></div>
@@ -45,6 +72,14 @@
         };
 
         DocsBotAI.init({ id: "cTW2YtLwX3hKtkVwhgJJ/QPMD7vaceBMPeBHfKr02" });
+    </script>
+
+    <script>
+        // JavaScript to close the overlay and chatbot when clicking outside
+        document.getElementById('overlay').addEventListener('click', function() {
+            document.getElementById('docsbotai-root').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        });
     </script>
 </body>
 </html>
